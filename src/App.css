@@ -1,0 +1,88 @@
+.wrapper {
+  background-color: rgba(0, 0, 0, 0.822);
+  min-height: 120vh;
+}
+nav {
+  background: rgba(0, 0, 0, 0.911);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.747);
+}
+.container {
+  font-family: "Lucida Handwriting", cursive;
+}
+.custom-search-input {
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.hero {
+  position: relative;
+  min-height: 80vh;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  background: #000000bd;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.hero-content {
+  max-width: 450px;
+  z-index: 2;
+}
+/* form */
+
+.form-center {
+  position: absolute;
+  top: 50%;
+  /* width: 450px; */
+
+  transform: translate(-50%, -50%);
+  transition: all 0.5s;
+}
+.form-top {
+  position: absolute;
+  top: 15%;
+  width: 450px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s;
+}
+
+/* Card */
+.movie-card-item {
+  background: rgba(245, 222, 179, 0.678);
+  backdrop-filter: blur(5px);
+  max-width: 450px;
+}
+.movie-card-item img {
+  width: 90%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .movie-card-item img {
+    max-height: 160px;
+    max-width: 700px;
+    padding: auto;
+
+    object-fit: cover;
+  }
+}
+/* End Card */
+
+.showMovie {
+  transform: scale(1);
+  animation: zoom 1s;
+}
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
